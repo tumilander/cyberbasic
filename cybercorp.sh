@@ -172,7 +172,7 @@ do
             if [ com0 == /usr/bin/git ]; then
                 com1="$(git clone https://github.com/tumilander/cybercorp.git)"
                 sleep 2
-                com2="$(cd cybercorp)"
+                com2="$(cd ./cybercorp/)"
                 com3="$(chmod +x ./cybercorp.sh)"
             else
                 background="$(apt-get install git -y)"
