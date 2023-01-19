@@ -168,10 +168,19 @@ do
             echo "Instalar e atualizar script"
             sleep 2
             echo "Baixando novas atualizações..."
-            com1="$(git clone https://github.com/tumilander/cybercorp.git)"
-            sleep 2
-            com2="$(cd cybercorp)"
-            com3="$(chmod +x ./cybercorp.sh)"
+            com0="$(whereis git | cut -d " " -f 2)"
+            if [ com0 == /usr/bin/git ]; then
+                com1="$(git clone https://github.com/tumilander/cybercorp.git)"
+                sleep 2
+                com2="$(cd cybercorp)"
+                com3="$(chmod +x ./cybercorp.sh)"
+            else
+                background="$(apt-get install git -y)"
+                com1="$(git clone https://github.com/tumilander/cybercorp.git)"
+                sleep 2
+                com2="$(cd cybercorp)"
+                com3="$(chmod +x ./cybercorp.sh)"
+            fi
             echo "instalando..."
             sleep 2
             com4="$(cp ./cybercorp.sh ./cybercorp)"
