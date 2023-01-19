@@ -184,9 +184,16 @@ do
             echo "instalando..."
             sleep 2
             echo "copiando arquivos..."
-            com4="$(cp ./cybercorp.sh ./cybercorp)"
-            echo "Movendo arquivos"
-            com5="$(mv -f ./cybercorp /usr/local/bin/)"
+            com4="$(cp ./cybercorp.sh ./cybercorp)"         
+            com10="$(ls /usr/local/bin/ | grep cybercorp)"
+            if [ com10 == cybercorp ]; then
+                echo "Movendo arquivos"
+                com5="$(mv -f ./cybercorp /usr/local/bin/)"
+            else 
+                com9="$(rm -rf /usr/local/bin/cybercorp)"
+                echo "Movendo arquivos"
+                com5="$(mv -f ./cybercorp /usr/local/bin/)"
+            fi
             sleep 2
             echo "Arquivos movidos"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
