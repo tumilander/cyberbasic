@@ -199,7 +199,7 @@ do
             echo "Arquivos movidos"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
             com7="$(cd ..)"
-            com8="$(rm -rf cyberbasic/)"
+            com8="$(rm -rf ./cyberbasic/)"
 
             echo "Finalizado!!!"
             sleep 5
