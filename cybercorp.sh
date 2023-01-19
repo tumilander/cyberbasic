@@ -170,15 +170,15 @@ do
             echo "Baixando novas atualizações..."
             com0="$(whereis git | cut -d " " -f 2)"
             if [ com0 == /usr/bin/git ]; then
-                com1="$(git clone https://github.com/tumilander/cybercorp.git)"
+                com1="$(git clone https://github.com/tumilander/cyberbasic.git)"
                 sleep 2
-                com2="$(cd /cybercorp/)"
+                com2="$(cd ./cyberbasic/)"
                 com3="$(chmod +x ./cybercorp.sh)"
             else
                 background="$(apt-get install git -y)"
-                com1="$(git clone https://github.com/tumilander/cybercorp.git)"
+                com1="$(git clone https://github.com/tumilander/cyberbasic.git)"
                 sleep 5
-                com2="$(cd ./cybercorp/)"
+                com2="$(cd ./cyberbasic/)"
                 sleep 1
                 com3="$(chmod +x ./cybercorp.sh)"
             fi
