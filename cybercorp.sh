@@ -177,8 +177,9 @@ do
             else
                 background="$(apt-get install git -y)"
                 com1="$(git clone https://github.com/tumilander/cybercorp.git)"
-                sleep 2
+                sleep 5
                 com2="$(cd ./cybercorp/)"
+                sleep 1
                 com3="$(chmod +x ./cybercorp.sh)"
             fi
             echo "instalando..."
@@ -188,11 +189,11 @@ do
             com10="$(ls /usr/local/bin/ | grep cybercorp)"
             if [ com10 == cybercorp ]; then
                 echo "Movendo arquivos"
-                com5="$(mv -f ./cybercorp /usr/local/bin/)"
+                com5="$(mv ./cybercorp /usr/local/bin/)"
             else 
                 com9="$(rm -rf /usr/local/bin/cybercorp)"
                 echo "Movendo arquivos"
-                com5="$(mv -f ./cybercorp /usr/local/bin/)"
+                com5="$(mv ./cybercorp /usr/local/bin/)"
             fi
             sleep 2
             echo "Arquivos movidos"
