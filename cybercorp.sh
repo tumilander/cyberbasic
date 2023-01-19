@@ -3,7 +3,7 @@
 #####################################
 #                                   #
 #       By Anderson Ribeiro         #
-#   https://github.com/tumilander/  #
+#  https://github.com/tumilander/   #
 #                                   #
 #####################################
 
