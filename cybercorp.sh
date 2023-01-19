@@ -167,12 +167,19 @@ do
             sleep 5
             echo "Instalar e atualizar script"
             sleep 2
+            echo "Baixando novas atualizações..."
+            com1="$(git clone https://github.com/tumilander/cybercorp.git)"
+            sleep 2
+            com2="$(cd cybercorp)"
+            com3="$(chmod +x ./cybercorp.sh)"
             echo "instalando..."
             sleep 2
-            com1="$(cp ./cybercorp.sh ./cybercorp)"
-            com2="$(mv ./cybercorp /usr/local/bin/)"
-            com3="$(chmod +x /usr/local/bin/cybercorp)"
-            #com4="$(rm ./cybercorp.sh)"
+            com4="$(cp ./cybercorp.sh ./cybercorp)"
+            com5="$(mv ./cybercorp /usr/local/bin/)"
+            com6="$(chmod +x /usr/local/bin/cybercorp)"
+            com7="$(cd ..)"
+            com8="$(rm -rf cybercorp/)"
+
             echo "Finalizado!!!"
             sleep 5
             echo "======================================================="
