@@ -183,8 +183,12 @@ do
             fi
             echo "instalando..."
             sleep 2
+            echo "copiando arquivos..."
             com4="$(cp ./cybercorp.sh ./cybercorp)"
-            com5="$(mv cybercorp /usr/local/bin/)"
+            echo "Movendo arquivos"
+            com5="$(mv ./cybercorp /usr/local/bin/)"
+            sleep 2
+            echo "Arquivos movidos"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
             com7="$(cd ..)"
             com8="$(rm -rf cybercorp/)"
