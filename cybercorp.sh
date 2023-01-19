@@ -186,7 +186,7 @@ do
             echo "copiando arquivos..."
             com4="$(cp ./cybercorp.sh ./cybercorp)"
             echo "Movendo arquivos"
-            com5="$(mv ./cybercorp /usr/local/bin/)"
+            com5="$(mv -f ./cybercorp /usr/local/bin/)"
             sleep 2
             echo "Arquivos movidos"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
