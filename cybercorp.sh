@@ -23,7 +23,7 @@ echo "((/ __|  )(_)) | |(_) (_))    ((_) ((/ __|  ((_)  ((_) ((_)_\  ";
 echo " | (__  | || | | '_ \ / -_)  | '_|  | (__  / _ \ | '_| | '_ \) ";
 echo "  \___|  \_, | |_.__/ \___|  |_|     \___| \___/ |_|   | .__/  ";
 echo "         |__/                                          |_|     ";
-echo "                                                        | v.1.1"
+echo "                                                        | v.1.2"
 
 echo -e "\033[05;31mBy Anderson\033[00;37m"
 while true
@@ -184,7 +184,7 @@ do
             echo "instalando..."
             sleep 2
             com4="$(cp ./cybercorp.sh ./cybercorp)"
-            com5="$(mv ./cybercorp /usr/local/bin/)"
+            com5="$(mv cybercorp /usr/local/bin/)"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
             com7="$(cd ..)"
             com8="$(rm -rf cybercorp/)"
