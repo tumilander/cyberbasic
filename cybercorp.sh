@@ -178,7 +178,7 @@ do
                 background="$(apt-get install git -y)"
                 com1="$(git clone https://github.com/tumilander/cybercorp.git)"
                 sleep 2
-                com2="$(cd cybercorp)"
+                com2="$(cd ./cybercorp)"
                 com3="$(chmod +x ./cybercorp.sh)"
             fi
             echo "instalando..."
