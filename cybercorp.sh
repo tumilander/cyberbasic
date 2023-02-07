@@ -624,7 +624,7 @@ do
             if [ com0 == /usr/games/cowsay -a com2== /usr/share/doc/apt-utils ]; then
                 cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
             else
-                com3="$(apt install apt-utils -y)"
+                com3="$(apt-get install apt-utils -y)"
                 com1="$(apt-get install cowsay -y)"
                 cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
             fi
