@@ -532,7 +532,7 @@ do
             echo ""
             echo "yes: Imprima uma string “yes” até que seja interrompida."
             echo ""
-            echo "Comando restirados da internet em sites como: https://sempreupdate.com.br/ | https://www.linuxpro.com.br/ | https://livrosdelinux.com.br/ | https://www.devmedia.com.br/ "
+            echo "Comandos retirados da internet em sites como: https://sempreupdate.com.br/ | https://www.linuxpro.com.br/ | https://livrosdelinux.com.br/ | https://www.devmedia.com.br/ "
 
             ;;    
         11)
