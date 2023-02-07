@@ -575,20 +575,20 @@ do
                 com1="$(git clone https://github.com/tumilander/cyberbasic.git)"
                 sleep 2
                 com2="$(cd ./cyberbasic/)"
-                com3="$(chmod +x ./cybercorp.sh)"
+                #com3="$(chmod +x ./cybercorp.sh)"
             else
                 background="$(apt-get install git -y)"
                 com1="$(git clone https://github.com/tumilander/cyberbasic.git)"
                 sleep 5
                 com2="$(cd ./cyberbasic/)"
                 sleep 1
-                com3="$(chmod +x ./cybercorp.sh)"
+                #com3="$(chmod +x ./cybercorp.sh)"
             fi
             echo "instalando..."
             sleep 2
             echo "copiando arquivos..."
             com4="$(cp ./cybercorp.sh ./cybercorp)"         
-            com10="$(ls /usr/local/bin/ | grep cybercorp)"´
+            com10="$(ls /usr/local/bin/ | grep cybercorp)"
             if [ com10 == cybercorp ]; then
                 echo "Movendo arquivos"
                 com5="$(mv ./cybercorp /usr/local/bin/)"
@@ -600,7 +600,7 @@ do
             sleep 2
             echo "Arquivos movidos"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
-            com7="$(cd /../)"
+            com7="$(cd ../)"
             com8="$(rm -rf ./cyberbasic/)"
 
             echo "Finalizado!!!"
