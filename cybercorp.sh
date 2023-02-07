@@ -617,21 +617,11 @@ do
             digite 0 para sair e cybercorp para abrir novamente\e[0m"
             sleep 5
             ;;
-        0)
-            atualiza=$(apt update && apt upgrade -Y)
-            fort="$(whereis fortune | cut -d " " -f 2)"
-            if [ fort == /usr/games/fortune ]; then
-                random=$(( $RANDOM % 2 ))
-                if [ $random -eq 0 ]; then
-                    fortune | cowsay
-                else
-                    fortune | cowsay -f tux
-                fi
-            else
-            fortune=$(apt install fortunes-br)
+        0)  
+            fortune="$(whereis fortune |cut -d " " -f 2)"
             com0="$(whereis cowsay | cut -d " " -f 2)"
             com3="$(apt-get install apt-utils -y)"
-            if [ com0 == /usr/games/cowsay ]; then
+            if [ com0 == /usr/games/cowsay && fortune == /usr/games/fortune ]; then
                 random=$(( $RANDOM % 2 ))
                 if [ $random -eq 0 ]; then
                     fortune | cowsay
@@ -639,7 +629,8 @@ do
                     fortune | cowsay -f tux
                 fi
             else
-                com1="$(apt-get install cowsay)"
+                com1="$(apt-get install cowsay -y)"
+                comfort="$(apt-get install fortunes-br -y)"
                 random=$(( $RANDOM % 2 ))
                 if [ $random -eq 0 ]; then
                     fortune | cowsay
