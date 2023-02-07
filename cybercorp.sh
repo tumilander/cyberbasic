@@ -620,9 +620,11 @@ do
         0)
 
             com0="$(whereis cowsay | cut -d " " -f 2)"
-            if [ com0 == /usr/games/cowsay ]; then
+            com2="$(locate apt-utils | grep -A1 "apt-utils" | head -1)"
+            if [ com0 == /usr/games/cowsay -a com2== /usr/share/doc/apt-utils ]; then
                 cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
             else
+                com3="$(apt install apt-utils -y)"
                 com1="$(apt-get install cowsay -y)"
                 cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
             fi
