@@ -559,11 +559,15 @@ do
             echo -e "\n"
             ;;
         00)
+            echo ""
+            echo "********************************************************************************************************************"
             echo "Para Instalar e/ou atualizar"
             echo "baixe o arquivo pelo comando git clone https://github.com/tumilander/cyberbasic.git"
             echo "entre na pasta criado: cd cyberbasic"
             echo "De permissõs para executar: chmod +x cybercorp.sh"
             echo "execute o script: ./cybercorp"
+            echo "********************************************************************************************************************"
+            echo ""
             sleep 5
             echo -e "\e[1;31mLembre-se que para instalar e/ou atualizar, deve-se estar no mesmo diretorio do arquivo baixado\e[0m"
             sleep 5
@@ -574,33 +578,33 @@ do
             if [ com0 == /usr/bin/git ]; then
                 com1="$(git clone https://github.com/tumilander/cyberbasic.git)"
                 sleep 2
-                com2="$(cd ./cyberbasic/)"
-                #com3="$(chmod +x ./cybercorp.sh)"
+                #com2="$(cd ./cyberbasic/)"
+                com3="$(chmod +x ./cyberbasic/cybercorp.sh)"
             else
                 background="$(apt-get install git -y)"
                 com1="$(git clone https://github.com/tumilander/cyberbasic.git)"
                 sleep 5
-                com2="$(cd ./cyberbasic/)"
+                com2="$(chmod +x ./cyberbasic/cybercorp.sh)"
                 sleep 1
                 #com3="$(chmod +x ./cybercorp.sh)"
             fi
             echo "instalando..."
             sleep 2
             echo "copiando arquivos..."
-            com4="$(cp ./cybercorp.sh ./cybercorp)"         
+            com4="$(cp ./cyberbasic/cybercorp.sh ./cyberbasic/cybercorp)"         
             com10="$(ls /usr/local/bin/ | grep cybercorp)"
             if [ com10 == cybercorp ]; then
                 echo "Movendo arquivos"
-                com5="$(mv ./cybercorp /usr/local/bin/)"
+                com5="$(mv ./cyberbasic/cybercorp /usr/local/bin/)"
             else 
                 com9="$(rm -rf /usr/local/bin/cybercorp)"
                 echo "Movendo arquivos"
-                com5="$(mv ./cybercorp /usr/local/bin/)"
+                com5="$(mv ./cyberbasic/cybercorp /usr/local/bin/)"
             fi
             sleep 2
             echo "Arquivos movidos"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
-            com7="$(cd ../)"
+            #com7="$(cd ../)"
             com8="$(rm -rf ./cyberbasic/)"
 
             echo "Finalizado!!!"
