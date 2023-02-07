@@ -23,7 +23,7 @@ echo "((/ __|  )(_)) | |(_) (_))    ((_) ((/ __|  ((_)  ((_) ((_)_\  ";
 echo " | (__  | || | | '_ \ / -_)  | '_|  | (__  / _ \ | '_| | '_ \) ";
 echo "  \___|  \_, | |_.__/ \___|  |_|     \___| \___/ |_|   | .__/  ";
 echo "         |__/                                          |_|     ";
-echo "                                                        | v.1.2"
+echo "                                                        | v.1.3"
 
 echo -e "\033[05;31mBy Anderson\033[00;37m"
 while true
@@ -32,7 +32,7 @@ do
     echo "Escolha uma opção:"
     echo -e "\n"
     echo "1" " - Escanear portas abertas                       " "|" "11 - Comando para Limpar pacotes desnecessários"
-    echo "2" " - Instalar aplicativo/programa                  " 
+    echo "2" " - Instalar aplicativo/programa                  " "|" "12 - Consultar comandos Linux"
     echo "3" " - Desinstalar aplicativo/programa               " 
     echo "4" " - Realizar conexao SSH                          "
     echo "5" " - Verifica o status ativo/inativo do programa   "
@@ -161,6 +161,16 @@ do
             echo "Finalizando..."
             com3="$(apt-get clean)"
             sleep 5
+            ;;
+        12)
+            echo "Digite o comando que deseja saber informações: "
+            read comando
+            response="$(curl https://www.mankier.com/api/v2/mans/?q=$comando 2>/dev/null | cut -d ":" -f 7 | cut -d '"' -f 2)"
+            echo -e "\n"
+            echo "==================================================================="
+            echo $response
+            echo "==================================================================="
+            echo -e "\n"
             ;;
         00)
             echo -e "\e[1;31mLembre-se que para instalar e/ou atualizar, deve-se estar no mesmo diretorio do arquivo baixado\e[0m"
