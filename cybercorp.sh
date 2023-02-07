@@ -537,15 +537,15 @@ do
             ;;    
         11)
             echo "Realizando a limpeza..."
-            com1="$(apt-get autoremove)"
+            com1="$(apt-get autoremove -y)"
             sleep 2
             echo "Removendo pacotes desnecessários..."
-            com2="$(apt-get autoclean)"
+            com2="$(apt-get autoclean -y)"
             sleep 2
             echo "Removendo pacotes inutilizados..."
             sleep 2 
             echo "Finalizando..."
-            com3="$(apt-get clean)"
+            com3="$(apt-get clean -y)"
             sleep 5
             ;;
         12)
