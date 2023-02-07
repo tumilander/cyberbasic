@@ -618,14 +618,34 @@ do
             sleep 5
             ;;
         0)
-
+            atualiza=$(apt update && apt upgrade -Y)
+            fort="$(whereis fortune | cut -d " " -f 2)"
+            if [ fort == /usr/games/fortune ]; then
+                random=$(( $RANDOM % 2 ))
+                if [ $random -eq 0 ]; then
+                    fortune | cowsay
+                else
+                    fortune | cowsay -f tux
+                fi
+            else
+            fortune=$(apt install fortunes-br)
             com0="$(whereis cowsay | cut -d " " -f 2)"
             com3="$(apt-get install apt-utils -y)"
             if [ com0 == /usr/games/cowsay ]; then
-                cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
+                random=$(( $RANDOM % 2 ))
+                if [ $random -eq 0 ]; then
+                    fortune | cowsay
+                else
+                    fortune | cowsay -f tux
+                fi
             else
-                com1="$(apt-get install cowsay -y)"
-                cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
+                com1="$(apt-get install cowsay)"
+                random=$(( $RANDOM % 2 ))
+                if [ $random -eq 0 ]; then
+                    fortune | cowsay
+                else
+                    fortune | cowsay -f tux
+                fi
             fi
             echo -e "\n\n\nSaindo...Beep! Beep!"
             echo -e "\n"
