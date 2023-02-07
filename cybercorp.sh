@@ -600,7 +600,7 @@ do
             sleep 2
             echo "Arquivos movidos"
             com6="$(chmod +x /usr/local/bin/cybercorp)"
-            com7="$(cd ..)"
+            com7="$(cd /../)"
             com8="$(rm -rf ./cyberbasic/)"
 
             echo "Finalizado!!!"
@@ -611,7 +611,16 @@ do
             sleep 5
             ;;
         0)
+
+            com0="$(whereis cowsay | cut -d " " -f 2)"
+            if [ com0 == /usr/games/cowsay ]; then
+                cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
+            else
+                com1="$(apt-get install cowsay -y)"
+                cowsay -f tux "Ja vai?! Desculpa te decepcionar, estou melhorando a cada dia!"
+            fi
             echo -e "\n\n\nSaindo...Beep! Beep!"
+            echo -e "\n"
             break
             ;;
         *)
