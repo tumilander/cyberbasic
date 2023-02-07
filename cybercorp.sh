@@ -569,7 +569,8 @@ do
             echo "********************************************************************************************************************"
             echo ""
             sleep 5
-            echo -e "\e[1;31mLembre-se que apos rodar pela primeira vez, pode-se atualizar a partir de qualquer diretorio\n digitando apenas cybercorp e opção 00\e[0m"
+            echo -e "\e[1;31mLembre-se que apos rodar pela primeira vez, pode-se atualizar a partir de qualquer diretorio\n 
+            digitando apenas cybercorp e opção 00\e[0m"
             sleep 5
             echo "Instalar e atualizar script"
             sleep 2
@@ -612,6 +613,8 @@ do
             echo "======================================================="
             echo "==Modo de uso: digite cybercorp independente do local=="
             echo "======================================================="
+            echo -e "\e[1;31mPara que as atualizações tenham efeito\n
+            digite 0 para sair e cybercorp para abrir novamente\e[0m"
             sleep 5
             ;;
         0)
