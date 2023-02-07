@@ -561,15 +561,15 @@ do
         00)
             echo ""
             echo "********************************************************************************************************************"
-            echo "Para Instalar e/ou atualizar"
+            echo "Para Instalar pela primeira vez"
             echo "baixe o arquivo pelo comando git clone https://github.com/tumilander/cyberbasic.git"
             echo "entre na pasta criado: cd cyberbasic"
-            echo "De permissõs para executar: chmod +x cybercorp.sh"
+            echo "De permissões para executar: chmod +x cybercorp.sh"
             echo "execute o script: ./cybercorp"
             echo "********************************************************************************************************************"
             echo ""
             sleep 5
-            echo -e "\e[1;31mLembre-se que para instalar e/ou atualizar, deve-se estar no mesmo diretorio do arquivo baixado\e[0m"
+            echo -e "\e[1;31mLembre-se que apos rodar pela primeira vez, pode-se atualizar a partir de qualquer diretorio\n digitando apenas cybercorp e opção 00\e[0m"
             sleep 5
             echo "Instalar e atualizar script"
             sleep 2
