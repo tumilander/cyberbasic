@@ -621,7 +621,7 @@ do
             fortune="$(whereis fortune |cut -d " " -f 2)"
             com0="$(whereis cowsay | cut -d " " -f 2)"
             com3="$(apt-get install apt-utils -y)"
-            if [ com0 == /usr/games/cowsay && fortune == /usr/games/fortune ]; then
+            if [ com0 == /usr/games/cowsay -a fortune == /usr/games/fortune ]; then
                 random=$(( $RANDOM % 2 ))
                 if [ $random -eq 0 ]; then
                     fortune | cowsay
