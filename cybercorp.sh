@@ -576,7 +576,7 @@ do
             sleep 2
             echo "Baixando novas atualizações..."
             com0="$(whereis git | cut -d " " -f 2)"
-            if [ com0 == /usr/bin/git ]; then
+            if [ $com0 == /usr/bin/git ]; then
                 com1="$(git clone https://github.com/tumilander/cyberbasic.git)"
                 sleep 2
                 #com2="$(cd ./cyberbasic/)"
@@ -594,7 +594,7 @@ do
             echo "copiando arquivos..."
             com4="$(cp ./cyberbasic/cybercorp.sh ./cyberbasic/cybercorp)"         
             com10="$(ls /usr/local/bin/ | grep cybercorp)"
-            if [ com10 == cybercorp ]; then
+            if [ $com10 == cybercorp ]; then
                 echo "Movendo arquivos"
                 com5="$(mv ./cyberbasic/cybercorp /usr/local/bin/)"
             else 
@@ -621,7 +621,7 @@ do
             fortune="$(whereis fortune |cut -d " " -f 2)"
             com0="$(whereis cowsay | cut -d " " -f 2)"
             com3="$(apt-get install apt-utils -y)"
-            if [ com0 == /usr/games/cowsay -a fortune == /usr/games/fortune ]; then
+            if [ $com0 == /usr/games/cowsay -a fortune == /usr/games/fortune ]; then
                 random=$(( $RANDOM % 2 ))
                 if [ $random -eq 0 ]; then
                     fortune | cowsay
